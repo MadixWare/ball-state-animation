@@ -386,7 +386,7 @@
   featured.load();
   featured.play();
 
-  // ❗ Only scroll on non-touch (desktop) devices
+  // Scroll ONLY to the Featured Reel section (not page top)
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   if (!isTouchDevice) {
     document.querySelector('.featured')?.scrollIntoView({ behavior: 'smooth' });
